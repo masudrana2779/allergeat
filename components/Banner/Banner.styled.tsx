@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const BannerWrap = styled.div`
+padding-bottom: 50px;
   .BannerContent {
     margin-bottom: 50px;
     .alMetter {

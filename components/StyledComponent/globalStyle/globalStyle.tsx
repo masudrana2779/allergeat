@@ -169,3 +169,23 @@ export const Span = styled.span<SpanProps>`
   justify-content: ${(props) => props.justifyContent};
   cursor: ${(props) => props.cursor};
 `;
+
+export const SubTitle = styled.div`
+  background: linear-gradient(96.14deg, #3a8ef6 -10.84%, #6f3afa 196.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: arial;
+  font-size: 34px;
+  line-height: 43px;
+  letter-spacing: 0.23em;
+  margin-bottom: 20px;
+`;
+
+export const Title = styled.div`
+  font-size: 60px;
+  line-height: 90px;
+  color: #000000;
+  margin-bottom: 40px;
+`;
