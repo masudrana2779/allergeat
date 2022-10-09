@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { FC, ReactElement } from "react";
+import FooterComponent from "./common/Footer";
 import HeaderComponent from "./common/Header/Header.component";
 
 type LayoutProps = {
@@ -56,6 +57,7 @@ const Layout: FC<LayoutProps> = ({
       <>
         <HeaderComponent />
         {children}
+        <FooterComponent />
       </>
     </>
   );
