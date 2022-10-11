@@ -51,12 +51,15 @@ export const MapWrap = styled.div`
   }
   .mapContent {
     .mapInner {
+      display: flex;
       iframe {
         height: 700px;
         width: 100%;
         border: 3px dashed #8a8585;
         filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 35.3125px;
+        border: none;
+        margin: 0;
       }
     }
   }
