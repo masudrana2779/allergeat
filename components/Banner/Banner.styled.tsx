@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerWrap = styled.div`
-padding-bottom: 50px;
+  padding-bottom: 50px;
   .BannerContent {
     margin-bottom: 50px;
     .alMetter {
@@ -46,9 +46,15 @@ padding-bottom: 50px;
       max-width: 987px;
       width: 100%;
       .eatText {
-        font-size: 26px;
+        font-size: 24px;
         line-height: 38px;
         color: rgba(82, 82, 82, 0.8);
+        input[type="text"] {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
       }
       .eatItemWrap {
         display: flex;

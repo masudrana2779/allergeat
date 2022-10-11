@@ -4,7 +4,7 @@ export const FriendlyChoicesWrap = styled.div`
   .ItemsWrap {
     .FItem {
       display: flex;
-      grid-gap: 60px;
+      grid-gap: 30px;
       overflow-y: auto;
     }
   }

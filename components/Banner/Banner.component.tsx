@@ -49,7 +49,12 @@ const BannerComponent = () => {
           <div className="col-12">
             <div className="IWantToEat">
               <DivBlock className="IWantToEatContent">
-                <DivBlock className="eatText">I want to eat...</DivBlock>
+                <DivBlock className="eatText">
+                  <input
+                    type={"text"}
+                    placeholder="I want to eat..."
+                  />
+                </DivBlock>
                 <DivBlock className="eatItemWrap">
                   <Link href={"/"}>
                     <a className="eatItem">Gluten Free</a>

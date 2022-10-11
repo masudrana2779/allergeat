@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { HeaderWrap } from "./Header.styled";
 
@@ -7,29 +8,33 @@ const HeaderComponent = () => {
     <HeaderWrap>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
-            <div className="logo">
-              <Image
-                src={"/assets/img/logo.svg"}
-                width={267}
-                height={44}
-                alt={"logo"}
-              />
-            </div>
-          </Navbar.Brand>
+          <Link href="/">
+            <a>
+              <div className="logo">
+                <Image
+                  src={"/assets/img/logo.svg"}
+                  width={267}
+                  height={44}
+                  alt={"logo"}
+                />
+              </div>
+            </a>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="mainMenuWrap">
             <Nav className="ms-auto mainMenu">
-              <Nav.Link href="#home">About Us</Nav.Link>
-              <Nav.Link href="#link">How to Use</Nav.Link>
-              <Nav.Link href="#link" className="mapBtn">
-                <Image
-                  src={"/assets/img/mapBtn.svg"}
-                  width={166}
-                  height={30}
-                  alt="map btn"
-                />
-              </Nav.Link>
+              <Link href="/about-us">About Us</Link>
+              <Link href="/how-to-use">How to Use</Link>
+              <Link href="/map">
+                <a className="mapBtn">
+                  <Image
+                    src={"/assets/img/mapBtn.svg"}
+                    width={166}
+                    height={30}
+                    alt="map btn"
+                  />
+                </a>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
