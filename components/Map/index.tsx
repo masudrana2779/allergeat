@@ -85,7 +85,7 @@ const MapPage = () => {
                       <div className="infoList">Call</div>
                       <div className="infoList">Menu</div>
                       <div className="infoList">Website</div>
-                      <div className="infoList">Reserve</div>
+                      <div className="infoList">Reserve </div>
                     </div>
                   </div>
                 </DivBlock>
