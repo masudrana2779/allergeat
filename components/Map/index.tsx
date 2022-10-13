@@ -36,7 +36,7 @@ const MapPage = () => {
                 <div className="mapContent">
                   <div className="mapInner">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.0908902793797!2d89.56773812921442!3d22.811481018411257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff901feb938063%3A0xf843ced6888607e1!2sGovernment%20Pioneer%20Mohila%20College!5e1!3m2!1sen!2sbd!4v1665454038016!5m2!1sen!2sbd"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.1513545231848!2d-73.95719298337109!3d40.78369795980402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a2565854d9%3A0x33ab11798fd57183!2s1260%20Madison%20Ave%2C%20New%20York%2C%20NY%2010128%2C%20USA!5e1!3m2!1sen!2sbd!4v1665683661283!5m2!1sen!2sbd"
                       loading="lazy"
                     ></iframe>
                   </div>
@@ -83,9 +83,9 @@ const MapPage = () => {
                   <div className="infoRight">
                     <div className="infoListWrap">
                       <div className="infoList">Call</div>
-                      <div className="infoList">Call</div>
-                      <div className="infoList">Call</div>
-                      <div className="infoList">Call</div>
+                      <div className="infoList">Menu</div>
+                      <div className="infoList">Website</div>
+                      <div className="infoList">Reserve</div>
                     </div>
                   </div>
                 </DivBlock>
