@@ -15,8 +15,8 @@ export const BannerWrap = styled.div`
       line-height: 40px;
       color: #525252;
       margin-bottom: 20px;
-
-      .img {
+      @media (max-width: 767px) {
+        font-size: 22px;
       }
     }
     .oneMap {
@@ -24,6 +24,10 @@ export const BannerWrap = styled.div`
       color: #000;
       line-height: 90px;
       margin-bottom: 20px;
+      @media (max-width: 767px) {
+        font-size: 36px;
+        line-height: 54px;
+      }
       span {
         color: #1678f2;
       }
@@ -32,6 +36,10 @@ export const BannerWrap = styled.div`
       font-size: 32px;
       line-height: 43px;
       color: #8a8585;
+      @media (max-width: 767px) {
+        font-size: 22px;
+        line-height: 33px;
+      }
     }
   }
   .IWantToEat {
@@ -45,6 +53,11 @@ export const BannerWrap = styled.div`
       padding: 0 15px 0 35px;
       max-width: 987px;
       width: 100%;
+      @media (max-width: 767px) {
+        height: 70px;
+        margin-top: 30px;
+      }
+      
       .eatText {
         font-size: 24px;
         line-height: 38px;
@@ -57,6 +70,9 @@ export const BannerWrap = styled.div`
         }
       }
       .eatItemWrap {
+      @media (max-width: 767px) {
+        display: none;
+      }
         display: flex;
         align-items: center;
         justify-content: flex-end;

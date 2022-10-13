@@ -181,6 +181,9 @@ export const SubTitle = styled.div`
   line-height: 43px;
   letter-spacing: 0.23em;
   margin-bottom: 20px;
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
 `;
 
 export const Title = styled.div`
@@ -188,4 +191,8 @@ export const Title = styled.div`
   line-height: 90px;
   color: #000000;
   margin-bottom: 40px;
+  @media (max-width: 767px) {
+    font-size: 30px;
+    line-height: 44px;
+  }
 `;

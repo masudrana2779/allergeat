@@ -50,24 +50,9 @@ const BannerComponent = () => {
             <div className="IWantToEat">
               <DivBlock className="IWantToEatContent">
                 <DivBlock className="eatText">
-                  <input
-                    type={"text"}
-                    placeholder="I want to eat..."
-                  />
+                  <input type={"text"} placeholder="I want to eat..." />
                 </DivBlock>
                 <DivBlock className="eatItemWrap">
-                  <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
-                  </Link>
-                  <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
-                  </Link>
-                  <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
-                  </Link>
-                  <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
-                  </Link>
                   <Link href={"/"}>
                     <a className="eatItem">Gluten Free</a>
                   </Link>
