@@ -4,6 +4,9 @@ export const FriendlyChoicesWrap = styled.div`
   @media (max-width: 991px) {
     padding: 50px 0;
   }
+  @media (max-width: 767px) {
+    padding: 0px 0 50px;
+  }
   .ItemsWrap {
     .FItem {
       display: flex;

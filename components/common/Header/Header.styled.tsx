@@ -14,6 +14,11 @@ export const HeaderWrap = styled.header`
     padding: 0;
     .logo {
       display: flex;
+
+      @media (max-width: 767px) {
+        max-width: 180px;
+        width: 100%;
+      }
     }
     .mainMenuWrap {
       .mainMenu {

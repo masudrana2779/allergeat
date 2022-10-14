@@ -58,6 +58,10 @@ export const FriendlyChoicesItemWrap = styled.div`
           font-size: 20px;
           line-height: 24px;
         }
+        @media (max-width: 767px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }

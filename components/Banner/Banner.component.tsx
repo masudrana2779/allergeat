@@ -8,7 +8,7 @@ const BannerComponent = () => {
     <BannerWrap>
       <div className="container">
         <div className="row">
-          <div className="col-md-8 col-sm-6 col-12">
+          <div className="col-md-8 col-sm-12 col-12">
             <div className="BannerContent">
               <DivBlock className="alMetter">
                 <DivBlock display="flex" alignItems="center">
@@ -32,7 +32,7 @@ const BannerComponent = () => {
               </DivBlock>
             </div>
           </div>
-          <div className="col-md-4 col-sm-6 col-12">
+          <div className="col-md-4 col-sm-12 col-12">
             <DivBlock className="text-right">
               <DivBlock display="flex">
                 <Image
