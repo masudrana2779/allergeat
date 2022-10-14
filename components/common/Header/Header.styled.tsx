@@ -4,7 +4,7 @@ export const HeaderWrap = styled.header`
   padding: 50px 0;
   margin-bottom: 30px;
   @media (max-width: 991px) {
-    padding: 30px 0;
+    padding: 20px 0;
     background-color: #fff;
     position: sticky;
     top: 0;
