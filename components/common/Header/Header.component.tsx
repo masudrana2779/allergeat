@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { HeaderWrap } from "./Header.styled";
+import { HeaderWrap, MenuHumbargurIcon } from "./Header.styled";
 
 const HeaderComponent = () => {
   return (
@@ -20,7 +20,15 @@ const HeaderComponent = () => {
               </div>
             </a>
           </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="bar_icon_Wrap">
+            <MenuHumbargurIcon>
+              <span className="bar_icon">
+                <span className="bar bar_1"></span>
+                <span className="bar bar_2"></span>
+                <span className="bar bar_3"></span>
+              </span>
+            </MenuHumbargurIcon>
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="mainMenuWrap">
             <Nav className="ms-auto mainMenu">
               <Link href="/about-us">About Us</Link>

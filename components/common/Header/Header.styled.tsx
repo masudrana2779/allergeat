@@ -1,16 +1,27 @@
 import styled from "styled-components";
 
 export const HeaderWrap = styled.header`
-  padding: 80px 0;
+  padding: 50px 0;
+  margin-bottom: 30px;
+  @media (max-width: 991px) {
+    padding: 30px 0;
+    background-color: #c1c1c1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
   .navbar {
     padding: 0;
-    .navbar-brand {
-      .logo {
-      }
+    .logo {
+      display: flex;
     }
     .mainMenuWrap {
       .mainMenu {
         align-items: center;
+        @media (max-width: 991px) {
+          align-items: flex-start;
+          margin-top: 20px;
+        }
         a {
           font-family: "black_han_sansregular";
           font-size: 25px;
@@ -22,6 +33,10 @@ export const HeaderWrap = styled.header`
           padding: 0;
           margin: 0;
           margin-right: 50px;
+          @media (max-width: 991px) {
+            margin: 5px 0;
+            font-size: 20px;
+          }
           &:last-child {
             margin-right: 0;
           }
@@ -40,4 +55,51 @@ export const HeaderWrap = styled.header`
       }
     }
   }
+  .bar_icon_Wrap {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    .bar_icon {
+      width: 30px;
+      height: 16px;
+      position: relative;
+      display: inline-block;
+      .bar {
+        position: absolute;
+        width: 100%;
+        background: #000;
+        height: 2px;
+        left: 0;
+        transition: all 0.5s;
+        &.bar_1 {
+          top: 0;
+        }
+        &.bar_2 {
+          top: 50%;
+        }
+        &.bar_3 {
+          top: 100%;
+        }
+      }
+    }
+    &:not(.collapsed) {
+      .bar_icon {
+        .bar {
+          &.bar_1 {
+            top: 50%;
+            transform: rotate(45deg);
+          }
+          &.bar_2 {
+            opacity: 0;
+          }
+          &.bar_3 {
+            transform: rotate(-45deg);
+            top: 50%;
+          }
+        }
+      }
+    }
+  }
 `;
+
+export const MenuHumbargurIcon = styled.div``;
