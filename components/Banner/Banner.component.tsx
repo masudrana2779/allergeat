@@ -16,6 +16,8 @@ const BannerComponent = () => {
                   <DivBlock className="img" display="flex" marginLeft="10px">
                     <Image
                       src={"/assets/img/hlogo.svg"}
+                      placeholder="blur"
+                      blurDataURL="/assets/img/hlogo.svg"
                       width={87}
                       height={46}
                       alt="hlogo"
@@ -37,6 +39,8 @@ const BannerComponent = () => {
               <DivBlock display="flex">
                 <Image
                   src={"/assets/img/bannerImg.png"}
+                  placeholder="blur"
+                  blurDataURL="/assets/img/bannerImg.png"
                   width={550}
                   height={560}
                   alt="banner img"

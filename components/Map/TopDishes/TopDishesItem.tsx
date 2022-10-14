@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DivBlock } from "../../StyledComponent/globalStyle/globalStyle";
 import { FriendlyChoicesItemWrap } from "./TopDishes.style";
 
 const TopDishesItem = () => {
@@ -12,6 +11,8 @@ const TopDishesItem = () => {
             <a>
               <Image
                 src={"/assets/img/FriendlyChoicesItemImg.png"}
+                placeholder="blur"
+                blurDataURL="/assets/img/FriendlyChoicesItemImg.png"
                 width={309}
                 height={370}
                 alt={"FriendlyChoicesItemImg"}

@@ -20,6 +20,8 @@ const FriendlyChoicesItem = () => {
             <a>
               <Image
                 src={"/assets/img/FriendlyChoicesItemImg.png"}
+                placeholder="blur"
+                blurDataURL="/assets/img/FriendlyChoicesItemImg.png"
                 width={309}
                 height={370}
                 alt={"FriendlyChoicesItemImg"}
