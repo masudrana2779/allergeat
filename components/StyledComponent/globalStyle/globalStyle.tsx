@@ -184,6 +184,9 @@ export const SubTitle = styled.div`
   @media (max-width: 767px) {
     font-size: 24px;
   }
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
 `;
 
 export const Title = styled.div`
@@ -194,5 +197,9 @@ export const Title = styled.div`
   @media (max-width: 767px) {
     font-size: 30px;
     line-height: 44px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    line-height: 54px;
   }
 `;

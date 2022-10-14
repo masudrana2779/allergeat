@@ -15,7 +15,7 @@ const FooterComponent = () => {
     <FooterWrap>
       <div className="container">
         <div className="row">
-          <div className="col-md-3 col-sm-12 col-12">
+          <div className="col-lg-3 col-md-12 col-sm-12 col-12">
             <FooterSingleItem>
               <div className="fmap">
                 <Image
@@ -64,7 +64,7 @@ const FooterComponent = () => {
               </div>
             </FooterSingleItem>
           </div>
-          <div className="col-md-9 col-sm-12 col-12">
+          <div className="col-lg-9 col-md-12 col-sm-12 col-12">
             <div className="row">
               <div className="col-md-3 col-sm-6 col-12">
                 <FooterSingleItem>
