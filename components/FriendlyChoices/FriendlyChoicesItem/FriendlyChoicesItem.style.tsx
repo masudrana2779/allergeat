@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 export const FriendlyChoicesItemWrap = styled.div`
   margin-bottom: 50px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
   .itemInner {
     width: 310px;
+    @media (max-width: 991px) {
+      width: 240px;
+    }
     .ItemImg {
       margin-bottom: 20px;
       position: relative;
@@ -32,6 +38,11 @@ export const FriendlyChoicesItemWrap = styled.div`
           height: 78px;
           padding: 15px;
           margin: 20px 10px;
+          @media (max-width: 991px) {
+            width: 65px;
+            height: 65px;
+            font-size: 10px;
+          }
         }
       }
     }
@@ -42,6 +53,10 @@ export const FriendlyChoicesItemWrap = styled.div`
         color: #8a8585;
         &.dishName {
           color: #000;
+        }
+        @media (max-width: 991px) {
+          font-size: 20px;
+          line-height: 24px;
         }
       }
     }
