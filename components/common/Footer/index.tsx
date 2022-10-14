@@ -178,12 +178,12 @@ const FooterComponent = () => {
           <div className="col-12">
             <div className="copyRightWrap">
               <div className="row">
-                <div className="col-md-6 col-sm-6 col-12">
+                <div className="col-md-6 col-sm-12 col-12">
                   <p>
                     Copyright © {new Date().getFullYear()} All Rights Reserved
                   </p>
                 </div>
-                <div className="col-md-6 col-sm6 col-12">
+                <div className="col-md-6 col-sm-12 col-12">
                   <div className="fTlonk">
                     <Link href={"/"}>Terms and Conditions</Link>|
                     <Link href={"/"}>Privacy Policy</Link>

@@ -5,7 +5,6 @@ export const BannerWrap = styled.div`
   .BannerContent {
     margin-bottom: 50px;
     .alMetter {
-      background: rgba(255, 255, 255, 0.25);
       border: 1px solid #b4b4b4;
       border-radius: 40px;
       display: inline-block;

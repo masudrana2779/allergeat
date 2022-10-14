@@ -13,7 +13,7 @@ const MapPage = () => {
     <MapWrap>
       <div className="container">
         <div className="row">
-          <div className="col-md-5 col-sm-12 col-12">
+          <div className="col-xl-5 col-md-12 col-sm-12 col-12">
             <DivBlock>
               <DivBlock marginBottom="30px">
                 <div className="IWantToEat">
@@ -26,7 +26,7 @@ const MapPage = () => {
                         <a className="eatItem">Gluten Free</a>
                       </Link>
                       <Link href={"/"}>
-                        <a className="eatItem">Gluten Free</a>
+                        <a className="eatItem">Dairy Free</a>
                       </Link>
                     </DivBlock>
                   </DivBlock>
@@ -45,7 +45,7 @@ const MapPage = () => {
             </DivBlock>
           </div>
 
-          <div className="col-md-7 col-sm-12 col-12">
+          <div className="col-xl-7 col-md-12 col-sm-12 col-12">
             <DivBlock className="RestaurantNameWrap">
               <div className="RestaurantNameWrapInner">
                 <h3 className="restaruntName">Restaurant Name</h3>

@@ -11,8 +11,10 @@ export const FooterWrap = styled.div`
   .copyRightWrap {
     border-top: 1px solid #d9dbe9;
     padding: 30px 0;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       font-size: 12px;
+    }
+    @media (max-width: 767px) {
       text-align: center;
       padding-bottom: 0;
       .row {
@@ -87,6 +89,7 @@ export const FooterSingleItem = styled.div`
     }
     @media (max-width: 767px) {
       font-size: 16px;
+      margin-bottom: 10px;
     }
   }
   .fAddress {
