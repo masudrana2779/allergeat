@@ -57,7 +57,10 @@ const BannerComponent = () => {
                     <a className="eatItem">Gluten Free</a>
                   </Link>
                   <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
+                    <a className="eatItem">Dairy Free</a>
+                  </Link>
+                  <Link href={"/"}>
+                    <a className="eatItem inActive">Meat Free</a>
                   </Link>
                 </DivBlock>
               </DivBlock>

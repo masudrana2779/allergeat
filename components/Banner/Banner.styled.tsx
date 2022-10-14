@@ -23,9 +23,13 @@ export const BannerWrap = styled.div`
       font-size: 70px;
       color: #000;
       line-height: 90px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       @media (max-width: 767px) {
         font-size: 36px;
+        line-height: 54px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 44px;
         line-height: 54px;
       }
       span {
@@ -33,7 +37,7 @@ export const BannerWrap = styled.div`
       }
     }
     .bannerPara {
-      font-size: 32px;
+      font-size: 28px;
       line-height: 43px;
       color: #8a8585;
       @media (max-width: 767px) {
@@ -57,7 +61,7 @@ export const BannerWrap = styled.div`
         height: 70px;
         margin-top: 30px;
       }
-      
+
       .eatText {
         font-size: 24px;
         line-height: 38px;
@@ -70,9 +74,9 @@ export const BannerWrap = styled.div`
         }
       }
       .eatItemWrap {
-      @media (max-width: 767px) {
-        display: none;
-      }
+        @media (max-width: 767px) {
+          display: none;
+        }
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -93,6 +97,15 @@ export const BannerWrap = styled.div`
           height: 78px;
           padding: 15px;
           margin: 20px 10px;
+          &.inActive {
+            color: #adadad;
+            background: linear-gradient(
+              96.14deg,
+              #4a6382 -10.84%,
+              #6f3afa 196.74%
+            );
+            pointer-events: none;
+          }
         }
       }
     }

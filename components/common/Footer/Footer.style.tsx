@@ -38,6 +38,9 @@ export const FooterSingleItem = styled.div`
     line-height: 30px;
     color: #000000;
     margin-bottom: 20px;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
     span {
       color: #1678f2;
     }
@@ -55,6 +58,9 @@ export const FooterSingleItem = styled.div`
     line-height: 28px;
     color: #1678f2;
     margin-bottom: 30px;
+    @media (max-width: 1024px) {
+      font-size: 18px;
+    }
   }
   .fAddress {
     p {
@@ -67,6 +73,9 @@ export const FooterSingleItem = styled.div`
       display: flex;
       span {
         margin-right: 10px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 14px;
       }
     }
   }
@@ -101,6 +110,12 @@ export const FooterMenu = styled.div`
             width: 10px;
           }
         }
+        @media (max-width: 1024px) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 1024px) {
+        margin: 10px 0;
       }
     }
   }
