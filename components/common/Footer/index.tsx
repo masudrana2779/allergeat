@@ -66,7 +66,7 @@ const FooterComponent = () => {
           </div>
           <div className="col-lg-9 col-md-12 col-sm-12 col-12">
             <div className="row">
-              <div className="col-md-3 col-sm-6 col-12">
+              <div className="col-md-3 col-sm-6 col-6">
                 <FooterSingleItem>
                   <h4>Our Allergies</h4>
                   <FooterMenu>
@@ -93,7 +93,7 @@ const FooterComponent = () => {
                   </FooterMenu>
                 </FooterSingleItem>
               </div>
-              <div className="col-md-3 col-sm-6 col-12">
+              <div className="col-md-3 col-sm-6 col-6">
                 <FooterSingleItem>
                   <h4>Restaurants</h4>
                   <FooterMenu>
@@ -120,7 +120,7 @@ const FooterComponent = () => {
                   </FooterMenu>
                 </FooterSingleItem>
               </div>
-              <div className="col-md-3 col-sm-6 col-12">
+              <div className="col-md-3 col-sm-6 col-6">
                 <FooterSingleItem>
                   <h4>Support</h4>
                   <FooterMenu>
@@ -144,7 +144,7 @@ const FooterComponent = () => {
                   </FooterMenu>
                 </FooterSingleItem>
               </div>
-              <div className="col-md-3 col-sm-6 col-12">
+              <div className="col-md-3 col-sm-6 col-6">
                 <FooterSingleItem>
                   <h4>Contacts us</h4>
                   <div className="fAddress">
