@@ -5,7 +5,7 @@ export const HeaderWrap = styled.header`
   margin-bottom: 30px;
   @media (max-width: 991px) {
     padding: 30px 0;
-    background-color: #c1c1c1;
+    background-color: #fff;
     position: sticky;
     top: 0;
     z-index: 10;
