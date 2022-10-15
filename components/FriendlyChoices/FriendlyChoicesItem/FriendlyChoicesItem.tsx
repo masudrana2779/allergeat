@@ -25,6 +25,7 @@ const FriendlyChoicesItem = () => {
                 width={309}
                 height={370}
                 alt={"FriendlyChoicesItemImg"}
+                layout='responsive'
               />
             </a>
           </Link>
