@@ -166,7 +166,7 @@ export const MapWrap = styled.div`
                   background: #ed1e79;
                 }
                 &.meatBox {
-                  background: #8EC641;
+                  background: #8ec641;
                 }
               }
               .infoBoxTitle {
@@ -215,6 +215,94 @@ export const MapWrap = styled.div`
               }
               &:hover {
                 opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+      .RestaurantNameDetailsWrap {
+        .RestaurantDetailsTop {
+          display: flex;
+          margin-bottom: 30px;
+          .gotoBack {
+            .backIcon {
+              font-size: 36px;
+              line-height: 45px;
+              color: #000000;
+            }
+          }
+          .itemNunber {
+            .infoBoxItem {
+              width: 165px;
+              margin: 0 15px;
+              @media (max-width: 767px) {
+                width: 80px;
+              }
+              .infoBox {
+                width: 100%;
+                max-width: 165px;
+                height: 160px;
+                padding: 15px;
+                background: #ffb100;
+                border-radius: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 15px;
+                @media (max-width: 767px) {
+                  border-radius: 15px;
+                  height: 90px;
+                }
+                .number {
+                  font-size: 60px;
+                  @media (max-width: 767px) {
+                    font-size: 28px;
+                  }
+                }
+              }
+            }
+          }
+          .detailsInfo {
+            .detailsCategory {
+              font-size: 26px;
+              line-height: 36px;
+              color: #000000;
+              @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 22px;
+              }
+            }
+            .rName {
+              font-size: 38px;
+              line-height: 48px;
+              color: #000000;
+              @media (max-width: 767px) {
+                font-size: 20px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+        .RestaurantDetailsMenu {
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+              border-top: 2px solid #000;
+              padding: 20px 0;
+              p {
+                text-align: center;
+                display: block;
+                font-size: 26px;
+                line-height: 46px;
+                color: #000000;
+                margin: 0;
+                @media (max-width: 767px) {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
               }
             }
           }

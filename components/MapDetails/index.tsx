@@ -1,14 +1,9 @@
 import Link from "next/link";
-import { useRef } from "react";
-import { useDraggable } from "react-use-draggable-scroll";
+import { BsArrowLeft } from "react-icons/bs";
+import { MapWrap } from "../Map/mapPage.styled";
 import { DivBlock } from "../StyledComponent/globalStyle/globalStyle";
-import { MapWrap } from "./mapPage.styled";
-import TopDishesItem from "./TopDishes/TopDishesItem";
 
 const MapDetailsPage = () => {
-  const ref =
-    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
-  const { events } = useDraggable(ref);
   return (
     <MapWrap>
       <div className="container">
@@ -48,59 +43,35 @@ const MapDetailsPage = () => {
           <div className="col-xl-7 col-md-12 col-sm-12 col-12">
             <DivBlock className="RestaurantNameWrap">
               <div className="RestaurantNameWrapInner">
-                <h3 className="restaruntName">Restaurant Name</h3>
-                <DivBlock className="restaurantInfo">
-                  <div className="infoLeft">
-                    <div className="infoTitle">
-                      <h5>
-                        Type of Restauant One Sentence Explaining The location
-                        etc...
-                      </h5>
-                    </div>
-                    <div className="infoBoxWrap">
-                      <div className="infoBoxItem">
-                        <Link href={"/"}>
-                          <a className="infoBox">
-                            <div className="number">41</div>
-                          </a>
-                        </Link>
-                        <div className="infoBoxTitle">Gluten Free</div>
+                <div className="RestaurantNameDetailsWrap">
+                  <div className="RestaurantDetailsTop">
+                    <div className="gotoBack">
+                      <div className="backIcon">
+                        <BsArrowLeft />
                       </div>
+                    </div>
+                    <div className="itemNunber">
                       <div className="infoBoxItem">
                         <div className="infoBox">
-                          <div className="comingSoon"> Coming Soon</div>
+                          <div className="number">41</div>
                         </div>
-                        <div className="infoBoxTitle">Dairy Free</div>
-                      </div>
-                      <div className="infoBoxItem">
-                        <div className="infoBox">
-                          <div className="comingSoon"> Meat Egg Nuts Vegan</div>
-                        </div>
-                        <div className="infoBoxTitle"> Coming Soon</div>
                       </div>
                     </div>
-                  </div>
-                  <div className="infoRight">
-                    <div className="infoListWrap">
-                      <div className="infoList">Call</div>
-                      <div className="infoList">Menu</div>
-                      <div className="infoList">Website</div>
-                      <div className="infoList">Reserve </div>
+                    <div className="detailsInfo">
+                      <div className="detailsCategory">Gluten Free Items</div>
+                      <div className="rName">Restaurant Name</div>
                     </div>
                   </div>
-                </DivBlock>
-                <DivBlock className="ItemsWrap">
-                  <h3>Top Dishes Offered</h3>
-                  <DivBlock className="FItem" {...events} ref={ref}>
-                    {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
-                      (item: any, i: number) => (
-                        <>
-                          <TopDishesItem key={i} />
-                        </>
-                      )
-                    )}
-                  </DivBlock>
-                </DivBlock>
+                  <div className="RestaurantDetailsMenu">
+                    <ul>
+                      {[1, 1, 1, 1, 1].map((item: any, i: number) => (
+                        <li key={i}>
+                          <p>Menu Item {i + 1}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </DivBlock>
           </div>
