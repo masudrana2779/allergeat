@@ -162,12 +162,6 @@ export const MapWrap = styled.div`
                     font-size: 14px;
                   }
                 }
-                &.comingSoonBox {
-                  background: #ed1e79;
-                }
-                &.meatBox {
-                  background: #8EC641;
-                }
               }
               .infoBoxTitle {
                 font-size: 22px;

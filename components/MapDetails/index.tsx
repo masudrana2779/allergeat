@@ -5,7 +5,7 @@ import { DivBlock } from "../StyledComponent/globalStyle/globalStyle";
 import { MapWrap } from "./mapPage.styled";
 import TopDishesItem from "./TopDishes/TopDishesItem";
 
-const MapPage = () => {
+const MapDetailsPage = () => {
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
@@ -59,7 +59,7 @@ const MapPage = () => {
                     </div>
                     <div className="infoBoxWrap">
                       <div className="infoBoxItem">
-                        <Link href={"/map-details"}>
+                        <Link href={"/"}>
                           <a className="infoBox">
                             <div className="number">41</div>
                           </a>
@@ -67,13 +67,13 @@ const MapPage = () => {
                         <div className="infoBoxTitle">Gluten Free</div>
                       </div>
                       <div className="infoBoxItem">
-                        <div className="infoBox comingSoonBox">
+                        <div className="infoBox">
                           <div className="comingSoon"> Coming Soon</div>
                         </div>
                         <div className="infoBoxTitle">Dairy Free</div>
                       </div>
                       <div className="infoBoxItem">
-                        <div className="infoBox meatBox">
+                        <div className="infoBox">
                           <div className="comingSoon"> Meat Egg Nuts Vegan</div>
                         </div>
                         <div className="infoBoxTitle"> Coming Soon</div>
@@ -110,4 +110,4 @@ const MapPage = () => {
   );
 };
 
-export default MapPage;
+export default MapDetailsPage;
