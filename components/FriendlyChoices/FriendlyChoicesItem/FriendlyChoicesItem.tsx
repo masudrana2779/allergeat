@@ -3,47 +3,51 @@ import Link from "next/link";
 import { DivBlock } from "../../StyledComponent/globalStyle/globalStyle";
 import { FriendlyChoicesItemWrap } from "./FriendlyChoicesItem.style";
 
-const FriendlyChoicesItem = () => {
+type FriendlyChoicesItemProps = {
+  item: any;
+};
+
+const FriendlyChoicesItem = ({ item }: FriendlyChoicesItemProps) => {
   return (
     <FriendlyChoicesItemWrap>
       <div className="itemInner">
         <div className="ItemImg">
           <DivBlock className="tagList">
-            <Link href={"/"}>
-              <a className="eatItem">Gluten Free</a>
-            </Link>
-            <Link href={"/"}>
-              <a className="eatItem">Gluten Free</a>
-            </Link>
+            {item.tags &&
+              item.tags.map((tag: any, i: number) => (
+                <div key={i}>
+                  <a className="eatItem">{tag}</a>
+                </div>
+              ))}
           </DivBlock>
-          <Link href={"/"}>
+          <Link href={"/map"}>
             <a>
               <Image
-                src={"/assets/img/FriendlyChoicesItemImg.png"}
+                src={item.RestaurantImg}
                 placeholder="blur"
-                blurDataURL="/assets/img/FriendlyChoicesItemImg.png"
+                blurDataURL={item.RestaurantImg}
                 width={309}
                 height={370}
                 alt={"FriendlyChoicesItemImg"}
-                layout='responsive'
+                layout="responsive"
               />
             </a>
           </Link>
         </div>
         <div className="FitemInfo">
           <h4 className="dishName">
-            <Link href={"/"}>
-              <a>Dish Name</a>
+            <Link href={"/map"}>
+              <a title={item.DishName}>{item.DishName}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/"}>
-              <a>Restauant Name</a>
+            <Link href={"/map"}>
+              <a title={item.RestaurantName}>{item.RestaurantName}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/"}>
-              <a>City, State</a>
+            <Link href={"/map"}>
+              <a title={item.Location}>{item.Location}</a>
             </Link>
           </h4>
         </div>

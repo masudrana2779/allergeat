@@ -51,6 +51,12 @@ export const FriendlyChoicesItemWrap = styled.div`
         font-size: 26px;
         line-height: 30px;
         color: #8a8585;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        max-height: 30px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
         &.dishName {
           color: #000;
         }

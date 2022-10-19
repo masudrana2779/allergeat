@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { BsArrowLeft } from "react-icons/bs";
 import { MapWrap } from "../Map/mapPage.styled";
 import { DivBlock } from "../StyledComponent/globalStyle/globalStyle";
 
 const MapDetailsPage = () => {
+  const router = useRouter();
   return (
     <MapWrap>
       <div className="container">
@@ -46,7 +48,7 @@ const MapDetailsPage = () => {
                 <div className="RestaurantNameDetailsWrap">
                   <div className="RestaurantDetailsTop">
                     <div className="gotoBack">
-                      <div className="backIcon">
+                      <div className="backIcon" onClick={() => router.back()}>
                         <BsArrowLeft />
                       </div>
                     </div>

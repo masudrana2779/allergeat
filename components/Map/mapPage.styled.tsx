@@ -229,6 +229,7 @@ export const MapWrap = styled.div`
               font-size: 36px;
               line-height: 45px;
               color: #000000;
+              cursor: pointer;
             }
           }
           .itemNunber {
