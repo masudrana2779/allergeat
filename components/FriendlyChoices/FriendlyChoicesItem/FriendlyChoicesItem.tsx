@@ -20,12 +20,12 @@ const FriendlyChoicesItem = ({ item }: FriendlyChoicesItemProps) => {
                 </div>
               ))}
           </DivBlock>
-          <Link href={"/map"}>
+          <Link href={"/restaurant/" + item.id}>
             <a>
               <Image
-                src={item.RestaurantImg}
+                src={"/assets/img/FriendlyChoicesItemImg.png"}
                 placeholder="blur"
-                blurDataURL={item.RestaurantImg}
+                blurDataURL={"/assets/img/FriendlyChoicesItemImg.png"}
                 width={309}
                 height={370}
                 alt={"FriendlyChoicesItemImg"}
@@ -36,17 +36,17 @@ const FriendlyChoicesItem = ({ item }: FriendlyChoicesItemProps) => {
         </div>
         <div className="FitemInfo">
           <h4 className="dishName">
-            <Link href={"/map"}>
-              <a title={item.DishName}>{item.DishName}</a>
+            <Link href={"/restaurant/1"}>
+              <a title={"Dish Name"}>{"Dish Name"}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/map"}>
-              <a title={item.RestaurantName}>{item.RestaurantName}</a>
+            <Link href={"/restaurant/1"}>
+              <a title={item.name}>{item.name}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/map"}>
+            <Link href={"/restaurant/1"}>
               <a title={item.Location}>{item.Location}</a>
             </Link>
           </h4>

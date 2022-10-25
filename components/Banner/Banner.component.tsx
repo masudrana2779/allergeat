@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import SearchComponent from "../common/Search/Search.component";
 import { DivBlock, Span } from "../StyledComponent/globalStyle/globalStyle";
 import { BannerWrap } from "./Banner.styled";
 
@@ -51,24 +51,7 @@ const BannerComponent = () => {
         </div>
         <div className="row">
           <div className="col-12">
-            <div className="IWantToEat">
-              <DivBlock className="IWantToEatContent">
-                <DivBlock className="eatText">
-                  <input type={"text"} placeholder="I want to eat..." />
-                </DivBlock>
-                <DivBlock className="eatItemWrap">
-                  <Link href={"/"}>
-                    <a className="eatItem">Gluten Free</a>
-                  </Link>
-                  <Link href={"/"}>
-                    <a className="eatItem">Dairy Free</a>
-                  </Link>
-                  <Link href={"/"}>
-                    <a className="eatItem inActive">Meat Free</a>
-                  </Link>
-                </DivBlock>
-              </DivBlock>
-            </div>
+            <SearchComponent />
           </div>
         </div>
       </div>

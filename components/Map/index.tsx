@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
+import SearchComponent from "../common/Search/Search.component";
 import { DivBlock } from "../StyledComponent/globalStyle/globalStyle";
 import { MapWrap } from "./mapPage.styled";
 import TopDishesItem from "./TopDishes/TopDishesItem";
 
-const MapPage = () => {
+const MapPage = (props: any) => {
+  const { restaurant } = props;
+
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
@@ -16,21 +19,7 @@ const MapPage = () => {
           <div className="col-xl-5 col-md-12 col-sm-12 col-12">
             <DivBlock>
               <DivBlock marginBottom="30px">
-                <div className="IWantToEat">
-                  <DivBlock className="IWantToEatContent">
-                    <DivBlock className="eatText">
-                      <input type={"text"} placeholder="I want to eat..." />
-                    </DivBlock>
-                    <DivBlock className="eatItemWrap">
-                      <Link href={"/"}>
-                        <a className="eatItem">Gluten Free</a>
-                      </Link>
-                      <Link href={"/"}>
-                        <a className="eatItem">Dairy Free</a>
-                      </Link>
-                    </DivBlock>
-                  </DivBlock>
-                </div>
+                <SearchComponent />
               </DivBlock>
               <DivBlock>
                 <div className="mapContent">
@@ -48,7 +37,7 @@ const MapPage = () => {
           <div className="col-xl-7 col-md-12 col-sm-12 col-12">
             <DivBlock className="RestaurantNameWrap">
               <div className="RestaurantNameWrapInner">
-                <h3 className="restaruntName">Restaurant Name</h3>
+                <h3 className="restaruntName">{restaurant?.name}</h3>
                 <DivBlock className="restaurantInfo">
                   <div className="infoLeft">
                     <div className="infoTitle">

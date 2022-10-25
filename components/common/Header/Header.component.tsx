@@ -20,7 +20,10 @@ const HeaderComponent = () => {
               </div>
             </a>
           </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="bar_icon_Wrap">
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="bar_icon_Wrap"
+          >
             <MenuHumbargurIcon>
               <span className="bar_icon">
                 <span className="bar bar_1"></span>
@@ -33,7 +36,7 @@ const HeaderComponent = () => {
             <Nav className="ms-auto mainMenu">
               <Link href="/about-us">About Us</Link>
               <Link href="/how-to-use">How to Use</Link>
-              <Link href="/map">
+              <Link href="/restaurant/1">
                 <a className="mapBtn">
                   <Image
                     src={"/assets/img/mapBtn.svg"}
