@@ -36,18 +36,13 @@ const FriendlyChoicesItem = ({ item }: FriendlyChoicesItemProps) => {
         </div>
         <div className="FitemInfo">
           <h4 className="dishName">
-            <Link href={"/restaurant/1"}>
-              <a title={"Dish Name"}>{"Dish Name"}</a>
-            </Link>
-          </h4>
-          <h4>
-            <Link href={"/restaurant/1"}>
+            <Link href={"/restaurant/" + item.id}>
               <a title={item.name}>{item.name}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/restaurant/1"}>
-              <a title={item.Location}>{item.Location}</a>
+            <Link href={"/restaurant/" + item.id}>
+              <a title={item.location}>{item.location}</a>
             </Link>
           </h4>
         </div>

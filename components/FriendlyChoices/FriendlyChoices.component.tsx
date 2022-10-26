@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import {
   DivBlock,
@@ -8,7 +8,7 @@ import {
 import { FriendlyChoicesWrap } from "./FriendlyChoices.style";
 import FriendlyChoicesItem from "./FriendlyChoicesItem/FriendlyChoicesItem";
 
-import { RestaurantList } from "../../RestaurantList.json";
+import axios from "axios";
 
 // const RestaurantList = [
 //   {
@@ -149,9 +149,18 @@ import { RestaurantList } from "../../RestaurantList.json";
 // ];
 
 const FriendlyChoicesComponent = () => {
+  const [restaurants, setRestaurants] = useState([]);
+
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
+
+  useEffect(() => {
+    axios
+      .get("/api/restaurants?limit=10")
+      .then((res: any) => setRestaurants(res.data));
+  }, []);
+  console.log(restaurants);
 
   return (
     <FriendlyChoicesWrap>
@@ -162,10 +171,9 @@ const FriendlyChoicesComponent = () => {
             <Title>Access to Allergy Friendly Choices.</Title>
             <DivBlock className="ItemsWrap">
               <DivBlock className="FItem" {...events} ref={ref}>
-                {RestaurantList &&
-                  RestaurantList.map((item: any, i: number) => (
-                      <FriendlyChoicesItem key={i} item={item} />
-                  ))}
+                {restaurants.map((item: any, i: number) => (
+                  <FriendlyChoicesItem key={i} item={item} />
+                ))}
               </DivBlock>
             </DivBlock>
           </div>
