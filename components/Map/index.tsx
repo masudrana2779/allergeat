@@ -25,8 +25,10 @@ const MapPage = (props: any) => {
                 <div className="mapContent">
                   <div className="mapInner">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.1513545231848!2d-73.95719298337109!3d40.78369795980402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a2565854d9%3A0x33ab11798fd57183!2s1260%20Madison%20Ave%2C%20New%20York%2C%20NY%2010128%2C%20USA!5e1!3m2!1sen!2sbd!4v1665683661283!5m2!1sen!2sbd"
-                      loading="lazy"
+                      src={
+                        "https://www.google.com/maps/embed/v1/place?key=AIzaSyDtzuSp55Hz7PU3ArFaBTDtEFWX15Uwlk0&q=" +
+                        restaurant?.location?.split(" ").join("+")
+                      }
                     ></iframe>
                   </div>
                 </div>
@@ -41,16 +43,18 @@ const MapPage = (props: any) => {
                 <DivBlock className="restaurantInfo">
                   <div className="infoLeft">
                     <div className="infoTitle">
-                      <h5>
-                        Type of Restauant One Sentence Explaining The location
-                        etc...
-                      </h5>
+                      <h5>{restaurant?.location}</h5>
                     </div>
                     <div className="infoBoxWrap">
                       <div className="infoBoxItem">
                         <Link href={"/map-details"}>
                           <a className="infoBox">
-                            <div className="number">41</div>
+                            <div className="number">
+                              {restaurant?.gf_items_count ===
+                              "all items are gluten free"
+                                ? "All"
+                                : restaurant?.gf_items_count}
+                            </div>
                           </a>
                         </Link>
                         <div className="infoBoxTitle">Gluten Free</div>
