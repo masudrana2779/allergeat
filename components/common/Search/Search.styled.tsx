@@ -61,6 +61,7 @@ export const SearchWrap = styled.div`
             #3a8ef6 -10.84%,
             #6f3afa 196.74%
           );
+          border: transparent;
           border-radius: 50%;
           font-size: 0.8em;
           line-height: 15px;

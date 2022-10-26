@@ -22,12 +22,20 @@ const SearchComponent = () => {
     }
   };
 
+  const goSearch = () => {
+    const s = (document.getElementById("search") as HTMLInputElement).value;
+    if (s) {
+      Router.push("/search?s=" + s);
+    }
+  };
+
   return (
     <SearchWrap>
       <div className="IWantToEat">
         <DivBlock className="IWantToEatContent">
           <DivBlock className="eatText">
             <input
+              id="search"
               type={"text"}
               onChange={searchRestaurants}
               onFocus={searchRestaurants}
@@ -37,12 +45,12 @@ const SearchComponent = () => {
             />
           </DivBlock>
           <DivBlock className="eatItemWrap">
-            <Link href={"/"}>
-              <a className="eatItem">Gluten Free</a>
-            </Link>
-            <Link href={"/"}>
-              <a className="eatItem">Dairy Free</a>
-            </Link>
+            <button onClick={() => goSearch()} className="eatItem">
+              Gluten Free
+            </button>
+            <button onClick={() => goSearch()} className="eatItem">
+              Dairy Free
+            </button>
             {/* <Link href={"/"}>
               <a className="eatItem inActive">Meat Free</a>
             </Link> */}
