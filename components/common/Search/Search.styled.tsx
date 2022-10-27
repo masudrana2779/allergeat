@@ -8,7 +8,7 @@ export const SearchWrap = styled.div`
       top: 130px;
       background: #f9f7f7;
       box-shadow: 2px 6px 4px rgba(145, 139, 139, 0.4);
-      width: 85%;
+      width: 100%;
       border: 1px solid #8080807d;
       border-radius: 50px;
       padding: 20px 35px;
@@ -16,6 +16,13 @@ export const SearchWrap = styled.div`
       flex-direction: column;
       gap: 10px;
       z-index: 999999999999;
+
+      span {
+        color: gray;
+        font-size: 15px;
+        font-weight: 900;
+        font-family: arial;
+      }
     }
 
     .IWantToEatContent {

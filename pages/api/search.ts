@@ -10,10 +10,18 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const restaurants = await db("restaurants")
+  let restaurants = await db("restaurants")
     .where("name", "LIKE", "%" + req.query.s + "%")
     .limit(5);
-  console.log(restaurants);
+
+  const menues = await db("menues")
+    .where("menues.menu_item", "LIKE", "%" + req.query.s + "%")
+    .whereNot("menues.menu_item", "all items are gluten free")
+    .join("restaurants as r", "r.name", "menues.restaurant_name")
+    .select("r.*", "menues.menu_item")
+    .limit(5);
+
+  restaurants = restaurants.concat(menues);
 
   res.status(200).send(restaurants);
 }

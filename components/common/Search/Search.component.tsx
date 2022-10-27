@@ -64,7 +64,10 @@ const SearchComponent = () => {
                 key={i}
                 className="searchItem"
               >
-                <a>{restaurant.name}</a>
+                <a>
+                  {restaurant.menu_item ?? restaurant.name}{" "}
+                  <span>({restaurant.menu_item ? "menu" : "rest"})</span>
+                </a>
               </Link>
             ))}
           </DivBlock>
