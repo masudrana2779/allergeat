@@ -25,11 +25,20 @@ const MapPage = (props: any) => {
                 <div className="mapContent">
                   <div className="mapInner">
                     <iframe
+                      id="gmap_canvas"
+                      src={
+                        "https://maps.google.com/maps?q=" +
+                        restaurant?.location?.split(" ").join("+") +
+                        "&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      }
+                      scrolling="no"
+                    ></iframe>
+                    {/* <iframe
                       src={
                         "https://www.google.com/maps/embed/v1/place?key=AIzaSyDtzuSp55Hz7PU3ArFaBTDtEFWX15Uwlk0&q=" +
                         restaurant?.location?.split(" ").join("+")
                       }
-                    ></iframe>
+                    ></iframe> */}
                   </div>
                 </div>
               </DivBlock>
@@ -57,13 +66,13 @@ const MapPage = (props: any) => {
                             </div>
                           </a>
                         </Link>
-                        <div className="infoBoxTitle">Gluten Free</div>
+                        <div className="infoBoxTitle">Gluten Friendly</div>
                       </div>
                       <div className="infoBoxItem">
                         <div className="infoBox comingSoonBox">
                           <div className="comingSoon"> Coming Soon</div>
                         </div>
-                        <div className="infoBoxTitle">Dairy Free</div>
+                        <div className="infoBoxTitle">Dairy Friendly</div>
                       </div>
                       <div className="infoBoxItem">
                         <div className="infoBox meatBox">

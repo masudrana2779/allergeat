@@ -46,10 +46,10 @@ const SearchComponent = () => {
           </DivBlock>
           <DivBlock className="eatItemWrap">
             <button onClick={() => goSearch()} className="eatItem">
-              Gluten Free
+              Gluten Friendly
             </button>
             <button onClick={() => goSearch()} className="eatItem">
-              Dairy Free
+              Dairy Friendly
             </button>
             {/* <Link href={"/"}>
               <a className="eatItem inActive">Meat Free</a>
