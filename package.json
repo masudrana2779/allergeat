@@ -12,6 +12,7 @@
     "mrs": "npx knex migrate:rollback && npx knex migrate:latest && npx knex seed:run"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.13.1",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.3",

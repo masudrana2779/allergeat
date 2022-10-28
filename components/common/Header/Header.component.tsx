@@ -36,7 +36,7 @@ const HeaderComponent = () => {
             <Nav className="ms-auto mainMenu">
               <Link href="/about-us">About Us</Link>
               <Link href="/how-to-use">How to Use</Link>
-              <Link href="/restaurant/1">
+              <Link href="/map">
                 <a className="mapBtn">
                   <Image
                     src={"/assets/img/mapBtn.svg"}

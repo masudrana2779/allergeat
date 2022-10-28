@@ -1,6 +1,5 @@
 
 require('dotenv').config()
-console.log(process.env)
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
