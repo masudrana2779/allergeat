@@ -1,7 +1,8 @@
 import { GoogleMap, MarkerF, useJsApiLoader } from "@react-google-maps/api";
+import axios from "axios";
 
 import { useRouter } from "next/router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BsArrowLeft } from "react-icons/bs";
 import SearchComponent from "../common/Search/Search.component";
 import { MapWrap } from "../Map/mapPage.styled";
@@ -13,31 +14,39 @@ const MapDetailsPage = () => {
     googleMapsApiKey: "AIzaSyDtzuSp55Hz7PU3ArFaBTDtEFWX15Uwlk0",
   });
 
+  const [restaurants, setRestaurants] = useState([]);
+  const [restaurant, setRestaurant] = useState([]);
+  const [menues, setMenues] = useState([]);
+
   const containerStyle = {
     width: "100%",
     height: "30rem",
   };
 
-  const [map, setMap] = useState(null);
+  useEffect(() => {
+    axios
+      .get("/api/restaurants?limit=200")
+      .then((res: any) => setRestaurants(res.data));
+  }, []);
 
-  const onLoad = (marker: any) => {
-    console.log("marker: ", marker);
+  const getRestaurant = async (restID: number) => {
+    axios.get("/api/restaurant?id=" + restID).then((res: any) => {
+      setRestaurant(res.data);
+      axios
+        .get("/api/menues?rest=" + res.data?.name)
+        .then((res: any) => setMenues(res.data));
+    });
   };
+
+  const [map, setMap] = useState(null);
 
   const onUnmount = useCallback(function callback(map: any) {
     setMap(null);
   }, []);
 
-  const router = useRouter();
+  console.log();
 
-  const position = {
-    lat: 37.772,
-    lng: -122.214,
-  };
-  const position2 = {
-    lat: 37.672,
-    lng: -122.114,
-  };
+  const router = useRouter();
 
   return (
     <MapWrap>
@@ -51,30 +60,32 @@ const MapDetailsPage = () => {
               <DivBlock>
                 <div className="mapContent">
                   <div className="mapInner">
-                    {isLoaded ? (
+                    {isLoaded && restaurants.length > 0 ? (
                       <GoogleMap
                         mapContainerStyle={containerStyle}
-                        center={position}
-                        zoom={11}
+                        center={{
+                          lat: parseFloat(restaurants[0].lat),
+                          lng: parseFloat(restaurants[0].lng),
+                        }}
+                        zoom={16}
                         onUnmount={onUnmount}
                       >
-                        <MarkerF
-                          onClick={() => console.log("OK")}
-                          onLoad={onLoad}
-                          position={position}
-                          label={"restaurant"}
-                          title={"Hello"}
-                        />
-                        <MarkerF onLoad={onLoad} position={position2} />
+                        {restaurants?.map((rest: any, i: number) => (
+                          <MarkerF
+                            key={i}
+                            onClick={() => getRestaurant(rest.id)}
+                            position={{
+                              lat: parseFloat(rest.lat),
+                              lng: parseFloat(rest.lng),
+                            }}
+                            label={rest.name}
+                            title={"Hello"}
+                          />
+                        ))}
                       </GoogleMap>
                     ) : (
                       <></>
                     )}
-
-                    {/* <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.1513545231848!2d-73.95719298337109!3d40.78369795980402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a2565854d9%3A0x33ab11798fd57183!2s1260%20Madison%20Ave%2C%20New%20York%2C%20NY%2010128%2C%20USA!5e1!3m2!1sen!2sbd!4v1665683661283!5m2!1sen!2sbd"
-                      loading="lazy"
-                    ></iframe> */}
                   </div>
                 </div>
               </DivBlock>
@@ -85,33 +96,51 @@ const MapDetailsPage = () => {
             <DivBlock className="RestaurantNameWrap">
               <div className="RestaurantNameWrapInner">
                 <div className="RestaurantNameDetailsWrap">
-                  <div className="RestaurantDetailsTop">
-                    <div className="gotoBack">
-                      <div className="backIcon" onClick={() => router.back()}>
-                        <BsArrowLeft />
-                      </div>
+                  {restaurant.length == 0 ? (
+                    <div className="rName">
+                      Select a restaurant from the map
                     </div>
-                    <div className="itemNunber">
-                      <div className="infoBoxItem">
-                        <div className="infoBox">
-                          <div className="number">41</div>
+                  ) : (
+                    <>
+                      <div className="RestaurantDetailsTop">
+                        <div className="gotoBack">
+                          <div
+                            className="backIcon"
+                            onClick={() => router.back()}
+                          >
+                            <BsArrowLeft />
+                          </div>
+                        </div>
+                        <div className="itemNunber">
+                          <div className="infoBoxItem">
+                            <div className="infoBox">
+                              <div className="number">
+                                {restaurant?.gf_items_count ===
+                                "all items are gluten free"
+                                  ? "All"
+                                  : restaurant?.gf_items_count}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="detailsInfo">
+                          <div className="detailsCategory">
+                            Gluten Free Items
+                          </div>
+                          <div className="rName">{restaurant?.name}</div>
                         </div>
                       </div>
-                    </div>
-                    <div className="detailsInfo">
-                      <div className="detailsCategory">Gluten Free Items</div>
-                      <div className="rName">Restaurant Name</div>
-                    </div>
-                  </div>
-                  <div className="RestaurantDetailsMenu">
-                    <ul>
-                      {[1, 1, 1, 1, 1].map((item: any, i: number) => (
-                        <li key={i}>
-                          <p>Menu Item {i + 1}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                      <div className="RestaurantDetailsMenu">
+                        <ul>
+                          {menues?.map((item: any, i: number) => (
+                            <li key={i}>
+                              <p>{item.menu_item}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </DivBlock>

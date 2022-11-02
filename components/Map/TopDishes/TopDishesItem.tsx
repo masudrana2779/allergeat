@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FriendlyChoicesItemWrap } from "./TopDishes.style";
 
-const TopDishesItem = () => {
+const TopDishesItem = (props: any) => {
+  const { item } = props;
   return (
     <FriendlyChoicesItemWrap>
       <div className="itemInner">
         <div className="ItemImg">
-          <Link href={"/"}>
+          <Link href={"#"}>
             <a>
               <Image
                 src={"/assets/img/FriendlyChoicesItemImg.png"}
@@ -22,13 +23,13 @@ const TopDishesItem = () => {
         </div>
         <div className="FitemInfo">
           <h4 className="dishName">
-            <Link href={"/"}>
-              <a>Dish Name</a>
+            <Link href={"#"}>
+              <a>{item.menu_item}</a>
             </Link>
           </h4>
           <h4>
-            <Link href={"/"}>
-              <a>Restauant Name</a>
+            <Link href={"#"}>
+              <a>{item.restaurant_name}</a>
             </Link>
           </h4>
         </div>

@@ -1,5 +1,6 @@
+import axios from "axios";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import SearchComponent from "../common/Search/Search.component";
 import { DivBlock } from "../StyledComponent/globalStyle/globalStyle";
@@ -8,10 +9,18 @@ import TopDishesItem from "./TopDishes/TopDishesItem";
 
 const MapPage = (props: any) => {
   const { restaurant } = props;
+  const [menues, setMenues] = useState([]);
 
   const ref =
     useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref);
+
+  useEffect(() => {
+    axios
+      .get("/api/menues?rest=" + restaurant?.name)
+      .then((res: any) => setMenues(res?.data));
+  });
+
   return (
     <MapWrap>
       <div className="container">
@@ -94,13 +103,11 @@ const MapPage = (props: any) => {
                 <DivBlock className="ItemsWrap">
                   <h3>Top Dishes Offered</h3>
                   <DivBlock className="FItem" {...events} ref={ref}>
-                    {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
-                      (item: any, i: number) => (
-                        <>
-                          <TopDishesItem key={i} />
-                        </>
-                      )
-                    )}
+                    {menues.map((item: any, i: number) => (
+                      <>
+                        <TopDishesItem key={i} item={item} />
+                      </>
+                    ))}
                   </DivBlock>
                 </DivBlock>
               </div>
