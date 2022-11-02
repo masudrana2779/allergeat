@@ -14,9 +14,9 @@ const MapDetailsPage = () => {
     googleMapsApiKey: "AIzaSyDtzuSp55Hz7PU3ArFaBTDtEFWX15Uwlk0",
   });
 
-  const [restaurants, setRestaurants] = useState([]);
-  const [restaurant, setRestaurant] = useState([]);
-  const [menues, setMenues] = useState([]);
+  const [restaurants, setRestaurants] = useState<any[]>([]);
+  const [restaurant, setRestaurant] = useState<any>([]);
+  const [menues, setMenues] = useState<any[]>([]);
 
   const containerStyle = {
     width: "100%",
