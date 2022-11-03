@@ -75,13 +75,13 @@ const MapPage = (props: any) => {
                             </div>
                           </a>
                         </Link>
-                        <div className="infoBoxTitle">Gluten Friendly</div>
+                        <div className="infoBoxTitle">Gluten Free</div>
                       </div>
                       <div className="infoBoxItem">
                         <div className="infoBox comingSoonBox">
                           <div className="comingSoon"> Coming Soon</div>
                         </div>
-                        <div className="infoBoxTitle">Dairy Friendly</div>
+                        <div className="infoBoxTitle">Dairy Free</div>
                       </div>
                       <div className="infoBoxItem">
                         <div className="infoBox meatBox">
