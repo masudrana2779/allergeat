@@ -17,6 +17,10 @@ const MapDetailsPage = () => {
   const [restaurants, setRestaurants] = useState<any[]>([]);
   const [restaurant, setRestaurant] = useState<any>([]);
   const [menues, setMenues] = useState<any[]>([]);
+  const [position, setPosition] = useState({
+    lat: 40.7395952,
+    lng: -73.98835640000001,
+  });
 
   const containerStyle = {
     width: "100%",
@@ -35,8 +39,14 @@ const MapDetailsPage = () => {
       axios
         .get("/api/menues?rest=" + res.data?.name)
         .then((res: any) => setMenues(res.data));
+
+      setPosition({
+        lat: parseFloat(res.data.lat),
+        lng: parseFloat(res.data.lng),
+      });
     });
   };
+  console.log(restaurant);
 
   const [map, setMap] = useState(null);
 
@@ -63,10 +73,7 @@ const MapDetailsPage = () => {
                     {isLoaded && restaurants.length > 0 ? (
                       <GoogleMap
                         mapContainerStyle={containerStyle}
-                        center={{
-                          lat: parseFloat(restaurants[0].lat),
-                          lng: parseFloat(restaurants[0].lng),
-                        }}
+                        center={position}
                         zoom={16}
                         onUnmount={onUnmount}
                       >
@@ -79,7 +86,7 @@ const MapDetailsPage = () => {
                               lng: parseFloat(rest.lng),
                             }}
                             label={rest.name}
-                            title={"Hello"}
+                            title={rest.location}
                           />
                         ))}
                       </GoogleMap>
