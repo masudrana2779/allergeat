@@ -13,7 +13,7 @@ export default async function handler(
   try {
     const restaurantsRef = await db
       .collection("restaurants")
-      .where("id", "==", parseInt(req.query.id))
+      .where("id", "==", parseInt(req.query.id as string))
       .get();
 
     const entriesData: any = restaurantsRef.docs.map((doc: any) => doc.data());

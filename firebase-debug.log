@@ -1,0 +1,191 @@
+[debug] [2022-12-31T20:50:42.485Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T20:50:42.488Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-31T20:50:42.488Z] CLI Version:   11.19.0
+[debug] [2022-12-31T20:50:42.488Z] Platform:      win32
+[debug] [2022-12-31T20:50:42.488Z] Node Version:  v16.14.0
+[debug] [2022-12-31T20:50:42.489Z] Time:          Sun Jan 01 2023 02:50:42 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T20:50:42.489Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T20:50:42.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T20:50:42.553Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T20:50:42.553Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T20:50:42.555Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T20:50:42.556Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T20:50:42.556Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:50:43.961Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T20:50:43.961Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:50:43.962Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T20:50:44.618Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T20:50:44.619Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T20:50:47.140Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T20:50:47.142Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T20:50:48.412Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T20:50:48.412Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T20:50:48.412Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T20:50:49.956Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T20:50:49.956Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T20:51:09.385Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-31T20:51:39.048Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T20:51:39.050Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-12-31T20:51:39.050Z] CLI Version:   11.19.0
+[debug] [2022-12-31T20:51:39.050Z] Platform:      win32
+[debug] [2022-12-31T20:51:39.051Z] Node Version:  v16.14.0
+[debug] [2022-12-31T20:51:39.051Z] Time:          Sun Jan 01 2023 02:51:39 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T20:51:39.052Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T20:51:39.117Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T20:51:39.118Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T20:51:39.119Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T20:51:39.121Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T20:51:39.122Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T20:51:39.122Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:51:40.525Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T20:51:40.526Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:51:40.527Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T20:51:40.992Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T20:51:40.993Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T20:51:43.516Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T20:51:43.518Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T20:51:44.636Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T20:51:44.636Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T20:51:44.637Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T20:51:46.355Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T20:51:46.355Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T20:52:06.323Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-31T20:53:11.665Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T20:53:11.667Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-12-31T20:53:11.667Z] CLI Version:   11.19.0
+[debug] [2022-12-31T20:53:11.667Z] Platform:      win32
+[debug] [2022-12-31T20:53:11.668Z] Node Version:  v16.14.0
+[debug] [2022-12-31T20:53:11.668Z] Time:          Sun Jan 01 2023 02:53:11 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T20:53:11.669Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T20:53:11.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T20:53:11.733Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T20:53:11.733Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T20:53:11.738Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T20:53:11.739Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T20:53:11.739Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:53:13.104Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T20:53:13.105Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:53:13.106Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T20:53:13.763Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T20:53:13.764Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T20:53:16.273Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T20:53:16.275Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T20:53:17.402Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T20:53:17.403Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T20:53:17.403Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T20:53:19.024Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T20:53:19.025Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T20:53:39.318Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-31T20:53:51.695Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T20:53:51.697Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-12-31T20:53:51.697Z] CLI Version:   11.19.0
+[debug] [2022-12-31T20:53:51.698Z] Platform:      win32
+[debug] [2022-12-31T20:53:51.698Z] Node Version:  v16.14.0
+[debug] [2022-12-31T20:53:51.698Z] Time:          Sun Jan 01 2023 02:53:51 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T20:53:51.699Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T20:53:51.764Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T20:53:51.765Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T20:53:51.765Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T20:53:51.767Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T20:53:51.768Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T20:53:51.768Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:53:53.148Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T20:53:53.149Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T20:53:53.150Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T20:53:53.818Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T20:53:53.818Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T20:53:56.397Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T20:53:56.398Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T20:53:57.510Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T20:53:57.510Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T20:53:57.511Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T20:53:59.164Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T20:53:59.164Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T20:54:18.971Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-31T21:27:56.520Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T21:27:56.521Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-12-31T21:27:56.522Z] CLI Version:   11.19.0
+[debug] [2022-12-31T21:27:56.522Z] Platform:      win32
+[debug] [2022-12-31T21:27:56.522Z] Node Version:  v16.14.0
+[debug] [2022-12-31T21:27:56.523Z] Time:          Sun Jan 01 2023 03:27:56 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T21:27:56.523Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T21:27:56.587Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T21:27:56.589Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T21:27:56.589Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T21:27:56.591Z] > refreshing access token with scopes: []
+[debug] [2022-12-31T21:27:56.592Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-31T21:27:56.593Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-31T21:27:56.805Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-31T21:27:56.806Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-31T21:27:56.816Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T21:27:56.816Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T21:27:56.817Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T21:27:58.185Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T21:27:58.185Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T21:27:58.187Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T21:27:58.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T21:27:58.947Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T21:28:01.553Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T21:28:01.555Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T21:28:02.829Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T21:28:02.829Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T21:28:02.830Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T21:28:04.378Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T21:28:04.379Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T21:28:21.970Z] ----------------------------------------------------------------------
+[debug] [2022-12-31T21:28:21.972Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2022-12-31T21:28:21.972Z] CLI Version:   11.19.0
+[debug] [2022-12-31T21:28:21.973Z] Platform:      win32
+[debug] [2022-12-31T21:28:21.973Z] Node Version:  v16.14.0
+[debug] [2022-12-31T21:28:21.973Z] Time:          Sun Jan 01 2023 03:28:21 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-12-31T21:28:21.974Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-31T21:28:22.035Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-31T21:28:22.037Z] > authorizing via signed-in user (cpeck21boom@gmail.com)
+[debug] [2022-12-31T21:28:22.037Z] [iam] checking project allergeat-350a3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-31T21:28:22.039Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions [none]
+[debug] [2022-12-31T21:28:22.040Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions x-goog-quota-user=projects/allergeat-350a3
+[debug] [2022-12-31T21:28:22.040Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T21:28:23.410Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions 200
+[debug] [2022-12-31T21:28:23.410Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/allergeat-350a3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-31T21:28:23.411Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 [none]
+[debug] [2022-12-31T21:28:24.059Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 200
+[debug] [2022-12-31T21:28:24.059Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/allergeat-350a3 {"projectId":"allergeat-350a3","projectNumber":"498286851465","displayName":"Allergeat","name":"projects/allergeat-350a3","resources":{"hostingSite":"allergeat-350a3"},"state":"ACTIVE","etag":"1_19f5fff8-7768-4126-8db0-fe5e7b5344be"}
+[debug] [2022-12-31T21:28:26.601Z] defaultcredentials: writing to file C:\Users\GameStation\AppData\Roaming\firebase\cpeck21boom_gmail_com_application_default_credentials.json
+[debug] [2022-12-31T21:28:26.603Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites pageToken=&pageSize=10
+[debug] [2022-12-31T21:28:27.736Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites 200
+[debug] [2022-12-31T21:28:27.736Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/allergeat-350a3/sites {"sites":[{"name":"projects/allergeat-350a3/sites/allergeat-350a3","defaultUrl":"https://allergeat-350a3.web.app","appId":"1:498286851465:web:537768a7008f1a11bc9d58","type":"DEFAULT_SITE"}]}
+[debug] [2022-12-31T21:28:27.736Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config [none]
+[debug] [2022-12-31T21:28:29.308Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config 200
+[debug] [2022-12-31T21:28:29.309Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:498286851465:web:537768a7008f1a11bc9d58/config {"projectId":"allergeat-350a3","appId":"1:498286851465:web:537768a7008f1a11bc9d58","storageBucket":"allergeat-350a3.appspot.com","apiKey":"AIzaSyAA95337KsJywf_R9J2ht62B-Daqdua-dY","authDomain":"allergeat-350a3.firebaseapp.com","messagingSenderId":"498286851465","measurementId":"G-WLQRJYMZQP"}
+[debug] [2022-12-31T21:28:49.338Z] TypeError: Cannot read properties of null (reading 'toString')
+    at ɵcodegenFunctionsDirectory (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:220:18)
+    at async prepareFrameworks (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:305:84)
+    at async deploy (C:\Users\GameStation\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

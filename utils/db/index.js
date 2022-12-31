@@ -5,7 +5,7 @@
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 import admin from "firebase-admin";
-import serviceAccount from "./../../json/allergeat-350a3-2e3eeb088a22.json";
+import serviceAccount from "../../json/allergeat-350a3-2e3eeb088a22.json";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -24,7 +24,7 @@ if (!admin.apps.length) {
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
     });
-  } catch (error: any) {
+  } catch (error) {
     console.log("Firebase admin initialization error", error.stack);
   }
 }

@@ -23,8 +23,8 @@
     "components/StyledComponent/globalStyle",
     "database/index.js",
     "database/index.js",
-    "utils/db/index.ts",
-    "utils/db/index.ts"
+    "utils/db/index.js",
+    "utils/db/index.js"
   ],
   "exclude": ["node_modules"]
 }
