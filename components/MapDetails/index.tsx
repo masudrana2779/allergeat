@@ -24,7 +24,7 @@ const MapDetailsPage = () => {
 
   const containerStyle = {
     width: "100%",
-    height: "30rem",
+    height: "20rem",
   };
 
   useEffect(() => {
@@ -58,6 +58,8 @@ const MapDetailsPage = () => {
 
   const router = useRouter();
 
+  console.log(restaurants);
+
   return (
     <MapWrap>
       <div className="container">
@@ -68,32 +70,34 @@ const MapDetailsPage = () => {
                 <SearchComponent />
               </DivBlock>
               <DivBlock>
-                <div className="mapContent">
-                  <div className="mapInner">
-                    {isLoaded && restaurants.length > 0 ? (
-                      <GoogleMap
-                        mapContainerStyle={containerStyle}
-                        center={position}
-                        zoom={16}
-                        onUnmount={onUnmount}
-                      >
-                        {restaurants?.map((rest: any, i: number) => (
-                          <MarkerF
-                            key={i}
-                            onClick={() => getRestaurant(rest.id)}
-                            position={{
-                              lat: parseFloat(rest.lat),
-                              lng: parseFloat(rest.lng),
-                            }}
-                            label={rest.name}
-                            title={rest.location}
-                          />
-                        ))}
-                      </GoogleMap>
-                    ) : (
-                      <></>
-                    )}
-                  </div>
+                <div className="">
+                  {isLoaded && restaurants.length > 0 ? (
+                    <GoogleMap
+                      mapContainerStyle={containerStyle}
+                      center={position}
+                      zoom={16}
+                      onUnmount={onUnmount}
+                    >
+                      {restaurants?.map((rest: any, i: number) => (
+                        <MarkerF
+                          key={i}
+                          onClick={() => getRestaurant(rest.id)}
+                          position={{
+                            lat: parseFloat(rest.lat),
+                            lng: parseFloat(rest.lng),
+                          }}
+                          label={
+                            rest.gf_items_count == "all items are gluten free"
+                              ? "All"
+                              : rest.gf_items_count
+                          }
+                          title={rest.location}
+                        />
+                      ))}
+                    </GoogleMap>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </DivBlock>
             </DivBlock>
@@ -104,7 +108,7 @@ const MapDetailsPage = () => {
               <div className="RestaurantNameWrapInner">
                 <div className="RestaurantNameDetailsWrap">
                   {restaurant.length == 0 ? (
-                    <div className="rName">
+                    <div className="text-3xl">
                       Select a restaurant from the map
                     </div>
                   ) : (

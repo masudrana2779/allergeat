@@ -25,7 +25,7 @@ export const BannerWrap = styled.div`
       }
     }
     .oneMap {
-      font-size: 70px;
+      font-size: 4rem;
       color: #000;
       line-height: 90px;
       margin-bottom: 30px;

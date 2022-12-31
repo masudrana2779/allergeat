@@ -22,7 +22,9 @@
     "components/home/Home.component.jsx",
     "components/StyledComponent/globalStyle",
     "database/index.js",
-    "database/index.js"
+    "database/index.js",
+    "utils/db/index.ts",
+    "utils/db/index.ts"
   ],
   "exclude": ["node_modules"]
 }

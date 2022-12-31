@@ -5,7 +5,7 @@ import { HeaderWrap, MenuHumbargurIcon } from "./Header.styled";
 
 const HeaderComponent = () => {
   return (
-    <HeaderWrap>
+    <HeaderWrap className="mb-10 lg:mb-0">
       <Navbar expand="lg">
         <Container>
           <Link href="/">

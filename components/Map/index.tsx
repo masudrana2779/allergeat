@@ -33,24 +33,23 @@ const MapPage = (props: any) => {
                 <SearchComponent />
               </DivBlock>
               <DivBlock>
-                <div className="mapContent">
-                  <div className="mapInner">
-                    <iframe
-                      id="gmap_canvas"
-                      src={
-                        "https://maps.google.com/maps?q=" +
-                        restaurant?.location?.split(" ").join("+") +
-                        "&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                      }
-                      scrolling="no"
-                    ></iframe>
-                    {/* <iframe
+                <div className="">
+                  <iframe
+                    className="w-full h-96"
+                    id="gmap_canvas"
+                    src={
+                      "https://maps.google.com/maps?q=" +
+                      restaurant?.location?.split(" ").join("+") +
+                      "&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    }
+                    scrolling="no"
+                  ></iframe>
+                  {/* <iframe
                       src={
                         "https://www.google.com/maps/embed/v1/place?key=AIzaSyDtzuSp55Hz7PU3ArFaBTDtEFWX15Uwlk0&q=" +
                         restaurant?.location?.split(" ").join("+")
                       }
                     ></iframe> */}
-                  </div>
                 </div>
               </DivBlock>
             </DivBlock>
@@ -104,55 +103,57 @@ const MapPage = (props: any) => {
             <div className="col-xl-7 col-md-12 col-sm-12 col-12">
               <DivBlock className="RestaurantNameWrap">
                 <div className="RestaurantNameWrapInner">
-                  <h3 className="restaruntName">{restaurant?.name}</h3>
-                  <DivBlock className="restaurantInfo">
+                  <h3 className="restaruntName mb-2">{restaurant?.name}</h3>
+                  <DivBlock className="restaurantInfo mb-3">
                     <div className="infoLeft">
                       <div className="infoTitle">
-                        <h5>{restaurant?.location}</h5>
+                        <h5 className="mb-3">{restaurant?.location}</h5>
                       </div>
-                      <div className="infoBoxWrap">
-                        <div className="infoBoxItem">
+                      <div className="flex gap-5 text-xl">
+                        <div className="text-center">
                           <button
                             onClick={() => setShowMenu(true)}
                             className="infoBox"
                           >
-                            <div className="number">
+                            <div className="bg-[#ffb100] w-44 h-32 text-[3.7rem] rounded-[30px] flex items-center justify-center">
                               {restaurant?.gf_items_count ===
                               "all items are gluten free"
                                 ? "All"
                                 : restaurant?.gf_items_count}
                             </div>
                           </button>
-                          <div className="infoBoxTitle">Gluten Free</div>
+                          <div className="mt-2">Gluten Friendly</div>
                         </div>
-                        <div className="infoBoxItem">
-                          <div className="infoBox comingSoonBox">
-                            <div className="comingSoon"> Coming Soon</div>
-                          </div>
-                          <div className="infoBoxTitle">Dairy Free</div>
-                        </div>
-                        <div className="infoBoxItem">
-                          <div className="infoBox meatBox">
+                        <div className="text-center">
+                          <div className="bg-[#ed1e79] w-44 h-32 text-2xl rounded-[30px] flex items-center justify-center">
                             <div className="comingSoon">
                               {" "}
-                              Meat Egg Nuts Vegan
+                              Coming <br /> Soon
                             </div>
                           </div>
-                          <div className="infoBoxTitle"> Coming Soon</div>
+                          <div className="mt-2">Dairy Friendly</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="bg-[#8ec641] w-44 h-32 text-2xl rounded-[30px] flex items-center justify-center">
+                            <div className="comingSoon">
+                              Coming <br /> Soon
+                            </div>
+                          </div>
+                          <div className="mt-2">Not Friendly</div>
                         </div>
                       </div>
                     </div>
-                    <div className="infoRight">
+                    {/* <div className="infoRight">
                       <div className="infoListWrap">
-                        {/* <div className="infoList">Call</div>
+                        <div className="infoList">Call</div>
                       <div className="infoList">Menu</div>
                       <div className="infoList">Website</div>
-                      <div className="infoList">Reserve </div> */}
+                      <div className="infoList">Reserve </div>
                       </div>
-                    </div>
+                    </div> */}
                   </DivBlock>
-                  <DivBlock className="ItemsWrap">
-                    <h3>Top Dishes Offered</h3>
+                  <DivBlock className="">
+                    <h3 className="mb-2 text-2xl">Top Dishes Offered</h3>
                     <DivBlock className="FItem" {...events} ref={ref}>
                       {menues.map((item: any, i: number) => (
                         <>
